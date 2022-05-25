@@ -1,6 +1,3 @@
-require 'capybara/dsl'
-
-class GoogleResults
-    include Capybara::DSL
+class GoogleResults < BasePage
 
 end

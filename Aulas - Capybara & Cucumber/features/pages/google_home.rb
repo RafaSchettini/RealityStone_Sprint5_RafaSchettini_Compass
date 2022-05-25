@@ -1,11 +1,4 @@
-require 'capybara/dsl'
-
-class GoogleHome
-    include Capybara::DSL
-
-    def load
-        visit ('https://www.google.com.br')
-    end
+class GoogleHome < BasePage
 
     def search_for(query)
         find("input[name='q']").set query
