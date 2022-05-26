@@ -6,7 +6,9 @@ require 'rspec'
 require 'capybara/cucumber'
 
 ENVIRONMENT = ENV['ENVIRONMENT']
-puts ENVIRONMENT
+ENVIRONMENT_CONFIG =  YAML.load_file(File.dirname(__FILE__) + "/environment/#{ENVIRONMENT}.yml")
+puts ENVIRONMENT_CONFIG
+URL = ENVIRONMENT_CONFIG['url']
 
 Capybara.default_driver = :selenium_chrome
-Capybara.app_host = 'https://www.google.com.br'
+Capybara.app_host = URL
