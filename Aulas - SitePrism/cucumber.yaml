@@ -4,3 +4,6 @@ default_hml: -p hml
 # Environments
 hml: ENVIRONMENT="hml"
 prd: ENVIRONMENT="prd"
+
+# Visual Mode
+headless: HEADLESS="true"
