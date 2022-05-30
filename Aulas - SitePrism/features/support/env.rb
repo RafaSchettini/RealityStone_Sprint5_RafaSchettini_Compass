@@ -12,15 +12,22 @@ URL = ENVIRONMENT_CONFIG['url']
 
 Capybara.register_driver :my_chrome do |app|
     caps = Selenium::WebDriver::Remote::Capabilities.chrome("goog:chromeOptions" => 
-        {"args" => ["--incognito","--start-maximized"]})
+        {"args" => ["--ignore-ssl-erros", "--ignore-certificate-erros", "--disable-popup-blocking","--incognito", "--start-maximized", "--disable-gpu", 
+            "--disable-impl-side-painting", "--acceptInsecureCerts=true", "--disable-translate", "--no-sandbox"]})
     
     if ENV['HEADLESS']
         caps["goog:chromeOptions"]["args"] << '--headless'
+        caps["goog:chromeOptions"]["args"] << '--disable-site-isolation-trials'
     end
+
+    client = Selenium::WebDriver::Remote::Http::Default.new
+    client.read_timeout = 90
     
     # options = { browser: :chrome, desired_capabilities: caps }
-    Capybara::Selenium::Driver.new(app, browser: :chrome, capabilities: caps)
+    puts "Raising Driver..."
+    Capybara::Selenium::Driver.new(app, browser: :chrome, capabilities: caps, http_client: client)
 end
 
 Capybara.default_driver = :my_chrome
 Capybara.app_host = URL
+Capybara.default_max_wait_time = 10
