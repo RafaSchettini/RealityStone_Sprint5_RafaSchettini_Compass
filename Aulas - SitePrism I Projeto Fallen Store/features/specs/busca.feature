@@ -14,7 +14,6 @@ Funcionalidade: Busca
         Quando realizar a busca por um produto
         Então deverão ser retornados ao usuário resultados de acordo com a busca
     
-    @search_products
     @search_for_available_products
     Esquema do Cenário: Busca por produtos disponíveis na plataforma
         Quando realizar a busca pelo "<produto>"
