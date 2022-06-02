@@ -11,3 +11,11 @@ end
 Então('deverá ser exibido o produto na respectiva cor escolhida') do
     expect(@product_page.main_image['src']).not_to eql @image_before
 end
+
+Dado('que o usuário esteja localizado ná página de um certo produto') do
+    steps %{
+        Dado que o usuário esteja na página inicial
+        Quando realizar a busca por um produto
+        E acessar a página do produto
+    }
+end
