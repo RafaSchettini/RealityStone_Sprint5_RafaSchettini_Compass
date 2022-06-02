@@ -1,4 +1,4 @@
-default: -p prd -p chrome -p html
+default: --format pretty -p prd -p chrome -p html
 default_hml: -p hml -p chrome
 
 # Reporters
