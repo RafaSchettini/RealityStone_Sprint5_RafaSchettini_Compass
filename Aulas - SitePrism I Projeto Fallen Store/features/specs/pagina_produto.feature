@@ -22,7 +22,9 @@ Funcionalidade: Página do Produto
 
     @add_product_to_cart
     Cenário: Adicionar produto ao carrinho
-        Quando o usuário adicionar o produto ao carrinho
+        Quando o usuário alterar a cor do produto
+        E alterar o tamanho do produto
+        E adicionar o produto ao carrinho
         Então o produto deverá ser adicionado ao carrinho
     
     @calc_product_shipment_price

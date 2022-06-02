@@ -17,6 +17,15 @@ Então('deverá ser exibido o produto na respectiva opção escolhida') do
     expect(@product_page.main_image['src']).not_to eql @image_before
 end
 
+Quando('adicionar o produto ao carrinho') do
+    @product_page.btn_buy.click
+    @cart_page = Pages::CartPage.new
+end
+  
+Então('o produto deverá ser adicionado ao carrinho') do
+    expect(@cart_page).to have_btn_buy_product
+end
+
 Dado('que o usuário esteja localizado ná página de um certo produto') do
     steps %{
         Dado que o usuário esteja na página inicial
