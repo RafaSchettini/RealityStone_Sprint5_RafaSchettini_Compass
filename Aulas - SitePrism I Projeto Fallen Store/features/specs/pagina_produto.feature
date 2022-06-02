@@ -28,11 +28,6 @@ Funcionalidade: Página do Produto
         Então o produto deverá ser adicionado ao carrinho
     
     @calc_product_shipment_price
-    Esquema do Cenário: Cálculo do frete de entrega do produto 
+    Cenário: Cálculo do frete de entrega do produto 
         Quando o usuário digitar o "<cep>"
-        Então deverá ser exibido "<mensagem>"
-
-        Exemplos:
-        | cep       | mensagem                                 |
-        | 11111-111 | Transportadora, prazo e preço de entrega |
-        |           | Por favor, informe um CEP válido         |
+        Então deverá ser exibido informações de entrega

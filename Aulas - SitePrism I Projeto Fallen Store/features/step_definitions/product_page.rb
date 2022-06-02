@@ -26,6 +26,20 @@ Então('o produto deverá ser adicionado ao carrinho') do
     expect(@cart_page).to have_btn_buy_product
 end
 
+Quando('o usuário digitar o {string}') do |cep|
+    @product_page.btn_open_cep.click
+    
+    cep = Factory::Dynamic.locale_data_info
+
+    @product_page.input_cep.set cep
+    @product_page.btn_calc_cep.click
+    
+end
+  
+Então('deverá ser exibido informações de entrega') do
+    expect(@product_page).to have_delivery_info
+end
+
 Dado('que o usuário esteja localizado ná página de um certo produto') do
     steps %{
         Dado que o usuário esteja na página inicial

@@ -10,5 +10,12 @@ module Pages
         elements :colors, 'ul[class="option-content option-content-desktop list-inline clearfix"] li'
 
         element :btn_buy, 'button[class="btn btn-primary btn-cart"]'
+
+        element :btn_open_cep, 'button[class="btn btn-default btn-shipping dropdown-toggle"]'
+        element :input_cep, 'input[class="cep-mask form-control"]'
+        element :btn_calc_cep, 'button[class="btn btn-default btn-calc"]'
+
+        element :delivery_info, 'ul[class="product-delivery-list"]'
+
     end
 end
