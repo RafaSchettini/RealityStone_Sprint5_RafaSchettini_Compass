@@ -21,6 +21,6 @@ Funcionalidade: Busca
 
         Exemplos:
         | produto    |
-        | gear       |
-        | wear       |
-        | acessórios |
+        | Gear       |
+        | Wear       |
+        | Acessórios |
