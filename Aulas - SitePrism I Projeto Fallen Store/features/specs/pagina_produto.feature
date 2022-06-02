@@ -12,12 +12,13 @@ Funcionalidade: Página do Produto
     @change_product_color
     Cenário: Troca de cor do produto
         Quando o usuário alterar a cor do produto
-        Então deverá ser exibido o produto na respectiva cor escolhida
+        Então deverá ser exibido o produto na respectiva opção escolhida
 
     @change_product_size
     Cenário: Troca de tamanho do produto
-        Quando o usuário alterar o tamanho do produto
-        Então deverá ser exibido o tamanho escolhido na página do produto
+        Quando o usuário alterar a cor do produto
+        E alterar o tamanho do produto
+        Então deverá ser exibido o produto na respectiva opção escolhida
 
     @add_product_to_cart
     Cenário: Adicionar produto ao carrinho
