@@ -7,7 +7,9 @@ Funcionalidade: Página do Produto
     Para adquirir o produto com a melhor experiência possível
 
     Contexto: Usuário localizado ná página de um produto
-        Dado que o usuário esteja localizado ná página de um certo produto
+        Dado que o usuário esteja na página inicial
+        Quando realizar a busca por um produto
+        E acessar a página do produto
 
     @change_product_color
     Cenário: Troca de cor do produto
