@@ -1,0 +1,4 @@
+valid_product: 'Camisas'
+user_for_login:
+  email: 'teste@compass.com.br'
+  password: '123456&'
