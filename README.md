@@ -167,7 +167,7 @@ bundle exec cucumber -p default -t@"<tag>" # ex: -t@calc_product_shipment_price
  
 ## Dependências
 * Linguagens e/ou API's:
-  - Ruby  
+  - Ruby version >= 3.0.0
 
 * Instalar gems do projeto:
  ```bash 
